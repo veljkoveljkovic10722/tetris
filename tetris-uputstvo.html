@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tetris</title>
+<link rel="stylesheet" href="style.css">
+<script src="tetris-meni.js"></script>
+</head>
+<body>
+
+    <div class="menu">
+        <div class="buttons">
+            <button id="startBtn" class="button">Play</button>
+            <button id="instructionsBtn" class="button">Instructions</button>
+            <button id="resultsBtn" class="button">Leaderboard</button>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <h2>How to play Tetris</h2>
+        <p>Use the arrow keys on your keyboard to move the blocks left, right and down.</p>
+        <p>Use the up arrow to rotate the blocks.</p>
+        <p>The goal of the game is to eliminate as many lines as possible to free up space for new blocks.</p>
+        <button id="menuBtn" class="button">Menu</button>
+    </div>
+
+    <div class="start-game">
+        <div class="settings">
+            <h2>Choose level and shapes</h2>
+            <div class="difficulty-selection">
+                <input class="radio" type="radio" id="easyRadio" name="difficulty" value="easy" checked>
+                <label for="easyRadio">Easy</label>
+                <input class="radio" type="radio" id="mediumRadio" name="difficulty" value="medium">
+                <label for="mediumRadio">Medium</label>
+                <input class="radio" type="radio" id="hardRadio" name="difficulty" value="hard">
+                <label for="hardRadio">Hard</label>
+            </div>
+
+            
+            <div class="shapes-selection">
+                <label for="shapeT"><input type="checkbox" id="shapeT" value="T" checked><img src="tetris-dodatno/t.png" class="shape-img" alt="T shape"></label>
+                <label for="shapeO"><input type="checkbox" id="shapeO" value="O" checked><img src="tetris-dodatno/o.png" class="shape-img" alt="O shape"></label>
+                <label for="shapeL"><input type="checkbox" id="shapeL" value="L" checked><img src="tetris-dodatno/L.png" class="shape-img" alt="L shape"></label>
+                <label for="shapeJ"><input type="checkbox" id="shapeJ" value="J" checked><img src="tetris-dodatno/j.png" class="shape-img" alt="J shape"></label>
+                <label for="shapeI"><input type="checkbox" id="shapeI" value="I" checked><img src="tetris-dodatno/i.png" class="shape-img" alt="I shape"></label>
+                <label for="shapeS"><input type="checkbox" id="shapeS" value="S" checked><img src="tetris-dodatno/s.png" class="shape-img" alt="S shape"></label>
+                <label for="shapeZ"><input type="checkbox" id="shapeZ" value="Z" checked><img src="tetris-dodatno/z.png" class="shape-img" alt="Z shape"></label>
+            </div>
+        </div>
+        <button id="startGameBtn" class="button">Play</button>
+        <button id="menuBtnS" class="button">Menu</button>
+    </div>
+
+</body>
+</html>

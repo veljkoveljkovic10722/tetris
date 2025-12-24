@@ -1,0 +1,372 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('tetris-dodatno/pozadinaa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    display: block;
+    border-radius: 50px;
+    text-align: center; 
+    padding: 50px;
+    background-color: rgba(255,255,255, .5);
+    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(82,9,121,.5) 51%, rgba(0,212,255,.5) 100%);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+    padding: 10px 30px;
+    border: solid #fff 1px;
+    box-shadow: rgb(0, 0, 0) 5px 5px 25px 5px;
+    border-radius: 50px;
+    transition : 300ms;
+    transform: translateY(0);
+    margin:20px;
+    width: 200px;
+   
+    cursor: pointer;
+}
+
+menu-btn-1{
+    font-size: 40px;
+    width: 300px;
+}
+
+button:hover{
+    transition : 300ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+    color: #0066cc;
+    border: solid 1px #0066cc;
+}
+
+.start-game{
+    display: none;
+    border-radius: 50px;
+    text-align: center; 
+    padding: 50px;
+    background-color: rgba(196, 155, 155, 0.5);
+    background: linear-gradient(90deg, rgba(158, 146, 146, 0.808) 0%, rgba(82,9,121,.8) 51%, rgba(0,212,255,.8) 100%);
+}
+
+
+
+.play-game{
+    display: none;
+    border-radius: 100px;
+    text-align: center; 
+    padding: 50px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(82,9,121,.8) 51%, rgba(0,212,255,.8) 100%);
+}
+
+.instructions{
+    display: none;
+    border-radius: 100px;
+    text-align: center; 
+    padding: 50px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(82,9,121,.8) 51%, rgba(0,212,255,.8) 100%);
+}
+
+.instructions h2{
+    color:white;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    color: #fff;
+}
+
+.instructions p{
+    color:white;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #fff;
+}
+
+.ranking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100px;
+    padding: 50px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(82,9,121,.8) 51%, rgba(0,212,255,.8) 100%);
+}
+
+.title{
+    color:white;
+    margin: 30px;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 51px;
+    color: #fff;
+}
+
+.ranking p{
+    color:white;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #fff;
+}
+
+.rezultati-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 30px;
+}
+
+
+.rezultati-table th,
+.rezultati-table td {
+    color: white; 
+    font-size: 25px; 
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.rezultati-table td{
+    text-align: center;
+}
+
+
+.game{
+    display: flex;
+    border-radius: 100px;
+    text-align: center; 
+    padding: 60px;
+    background: linear-gradient(90deg, rgba(82,9,121,.85) 51%, rgba(0,212,255,.9) 100%);
+
+}
+
+canvas {
+    border: 5px solid rgb(88, 10, 129);
+}
+
+#tetris {
+    height: 70vh;
+    margin-right: 40px;
+}
+
+#game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(90deg, rgba(82,9,121,.85) 51%, rgba(0,212,255,.9) 100%);
+    color: white;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 30px;
+    -webkit-box-shadow: 0px 68px 275px 200px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 68px 275px 200px rgba(0,0,0,0.75);
+    box-shadow: 0px 68px 275px 200px rgba(0,0,0,0.75);
+}
+
+#game-over p{
+    margin: 20px;
+    font-size: 40px;
+}
+
+#player-name{
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: black;
+    background: white;
+    padding: 10px 30px;
+    border: solid #fff 1px;
+    box-shadow: rgb(0, 0, 0) 5px 5px 25px 5px;
+    border-radius: 50px;
+    margin:20px;
+    width: 150px;
+}
+
+.game-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.score{
+    
+    margin-top: 15px;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+}
+
+#score{
+    font-size: 45px;
+    margin-top: -20px;
+}
+
+#LEVEL{
+    font-size: 45px;
+    margin-top: -20px;
+}
+
+.settings h2{
+    color:white;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    color: #fff;
+    padding: 15px;
+    margin: 0;
+}
+
+.difficulty-selection input[type="radio"] {
+    font-size: 15px;
+    color: white;
+}
+
+.difficulty-selection label {
+    font-size: 30px;
+    color: white;
+}
+
+.shapes-selection{
+    padding: 15px;
+}
+
+.shapes-selection label {
+    font-size: 20px;
+    color: white;
+}
+
+.difficulty-selection,
+.shapes-selection {
+    font-size: 20px;
+    color: white;
+}
+
+.difficulty-selection input[type="radio"] + label,
+.shapes-selection input[type="checkbox"] + label {
+    color: white;
+}
+
+.tetrominos{
+    padding: 20px;
+    width: 300px;
+    margin-bottom: -20px;
+}
+
+.shape-img{
+    width: 100px;
+
+}
+
+.difficulty-selection {
+    margin: 20px 0;
+}
+
+.radio {
+    margin: 0 10px;
+}
+
+.shapes-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.shapes-selection label {
+    position: relative;
+    cursor: pointer;
+}
+
+.shapes-selection input[type="checkbox"] {
+    display: none;
+}
+
+.shapes-selection img {
+    width: 75px;
+    height: 75px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.shapes-selection input[type="checkbox"]:checked + img {
+    border-color: #ffffff;
+}
+
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+
+.difficulty-selection {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.radio {
+    display: none;
+    
+}
+
+.radio + label {
+    background-color: #f0f0f0;
+    color:#007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.radio:checked + label {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.radio + label:hover {
+    background-color: #e0e0e0;
+}
+
+.difficulty-selection input[type="radio"] + label, .shapes-selection input[type="checkbox"] + label {
+    color: #252726;
+}

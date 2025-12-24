@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="game">
+        <div class="game-scene">
+            <canvas id="tetris" width="300" height="600"></canvas>
+        </div>
+        <div class="game-info">
+            <canvas id="next-piece" width="120" height="120"></canvas>
+            <div class="score">
+                <p class="score-p">SCORE</p>
+                <p id="score">0</p>
+            </div>
+            <div class="score">
+                <p class="score-p">LEVEL</p>
+                <p id="LEVEL">TEST</p>
+            </div>
+            
+        </div>
+        <div id="dark-overlay">
+            <div id="game-over">
+                <p>Game Over</p>
+                <input type="text" id="player-name" placeholder="Enter your name">
+                <button id="submit-name" class="button">Submit</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="tetris.js"></script>
+    <audio id="backgroundMusic" loop>
+        <source src="tetris-dodatno/Original Tetris theme (Tetris Soundtrack).mp3" type="audio/mpeg">
+        <!-- Dodajte fallback sadržaj za pregledače koji ne podržavaju HTML5 audio -->
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
